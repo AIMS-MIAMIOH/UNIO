@@ -1,0 +1,23 @@
+midstep({
+  "responseHeader":{
+    "status":0,
+    "QTime":0,
+    "params":{
+      "fl":"author",
+      "indent":"on",
+      "q":"*:*",
+      "callback":"midstep",
+      "wt":"json",
+      "rows":"5"}},
+  "response":{"numFound":180,"start":0,"docs":[
+      {
+        "author":"John Kerry"},
+      {
+        "author":"Jonathan J.Finer"},
+      {
+        "author":"Jennifer Stout"},
+      {
+        "author":"Thomas Suillvan"},
+      {
+        "author":"Lisa Kenna"}]
+  }})

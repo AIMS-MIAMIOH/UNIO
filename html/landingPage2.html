@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+        <link href="images/UNIO_FINAL_WHITE.png" rel="shortcut icon" type="image/vnd.microsoft.icon"/>
+	  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<script>
+	var json;
+	var data;
+	var data1;
+	var namedata;
+	var tempJSON;
+	function on_search() {
+		console.log("hitsearch");
+		jQuery('#results').empty();
+		var query = jQuery('#dosquery').val();
+		if (query.length == 0) {
+			return;
+		}
+	        var url='http://107.170.33.188:8983/solr/DOS5/query?q='+query+'&fl=author&rows=5&indent=on&wt=json&callback=?&json.wrf=;';
+	        jQuery.getJSON(url,function(data){
+			midsteptest(data);
+		}).done(test());
+	}
+
+function test(){
+	
+//	console.log(data.response.docs[0]);
+//	tempJSON= $.toJSON(res.data[0]);
+//	alert( tempJSON.length, tempJSON[0]);
+
+
+};
+
+    function midsteptest(data){
+		console.log(data.layoutdescriptions[0].author,"maybe author");
+		console.log(data.response.docs.author);
+		console.log("midsteptest");
+			jQuery.each(data.response.docs, function(i, docs) {
+				console.log("looking at second doc");
+				var uurl='http://107.170.33.188:7724/singleuser/'+docs.author+'?callback=?&json.wrf=?';
+				jQuery.getJSON(uurl, midstep(data1));
+			}).done(console.log("finslkd second",midstep()));
+
+    };
+
+	function midstep(data1) {
+
+			jQuery('#results').text(data1.name);
+			jQuery('#results').append('<p>stil trying</p>');
+  	             jQuery('#results').append('<div class="person"><img class="rimg" src="'+data.Image+'"/><h4 class="rname">'+data.name+'</h4><p class="rtitle">'+data.Title+'</p><p class="rphone">'+data.Phone+'</p></div>');
+                            
+                          
+		var total = 'Found ' + json.response.numFound + ' results. Displaying 5';
+                jQuery('#results').prepend('<div>' + total + '</div>');
+	};
+
+	function render(data){
+//		console.log(data1);
+//		var indv = data.person;
+//		console.log(indv.name);
+
+	};
+
+
+
+    function on_ready() {
+	$('#search').click(on_search);
+        /* Hook enter to search */
+        $('body').keypress(function(e) {
+            if (e.keyCode == '13') {
+                on_search();
+            }
+        });
+    };
+
+    $(document).ready(on_ready);
+</script>		
+	<link rel="stylesheet" href="main.css" type="text/css" media="screen">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+	
+	
+
+<title>Be Brillant Now</title>
+</head>
+
+<body>
+	<header>	
+<div id="HeaderBar">
+	<div id="HeaderLeft">
+		<a href="landingPage.html"><img src="images/UNIO_FINAL_WHITE.png" height="50" alt="UNIO FINAL" id="logo"></a>
+	</div>
+	<div id="HeaderRight">
+		<a href="profile.html"><img src="images/DanielSepulvedav.jpg" width="550" height="50" alt="DanielSepulvedav">
+		</a>
+	</div>
+</div>
+	</header>
+		
+<div id="titleSpace"><h1>Join Forces. Be Brillant.</h1>
+		<hr></div>
+	
+<div class="section group" id="collaborate">
+<div class="col span_1_of_3" id="contacts"> 
+	<h2>Contacts</h2>
+	<div class="tabs">
+		<div class="tab">
+			<input type="radio" id="tab-1" name="tab-group-1" checked>
+			<label for="tab-1">Recent</label>
+			<div class="content">
+				<div class="bio">
+					<a href="profile2.html"><img src="images/HormatsRobert.jpg" alt="HormatsRobert"></a>
+					<div class="description">
+					<a href="profile2.html">Robert Hormats</p></a>
+						<p style="font-size:10pt; color:#838484">Assistant Secretary of State for Economic and Business Affairs</p>
+					</div>
+				</div>
+				<div class="bio">
+					<a href="profile3.html"><img src="images/MarcGrossman.jpg" alt="MarcGrossman"></a>
+					<div class="description">
+						<a href="profile3.html"><p>Marc Grossman</p></a>
+						<p style="font-size:10pt; color:#838484">Assistant Secretary of State for European and Canadian Affairs</p>
+					</div>
+				</div>
+				
+				<div class="bio">
+					<a href="profile4.html"><img src="images/RashadHussain.jpg" alt="RashadHussain"></a>
+					<div class="description">
+						<a href="profile4.html"><p>Rashad Hussain</p></a>
+						<p style="font-size:10pt; color:#838484">Special Envoy to the Organisation of Islamic Cooperation</p>
+					</div>
+				</div>
+				
+				<div class="bio">
+					<a href="profile5.html"><img src="images/HannahRosenthal.jpg" alt="HannahRosenthal"></a>
+					<div class="description">
+						<a href="profile5.html"><p>Hannah Rosenthal</p></a>
+						<p style="font-size:10pt; color:#838484">Special Envoy to Monitor and Combat Anti-Semitism</p>
+					</div>
+				</div>
+				
+				 <form action="profile.html">
+				  <input type="submit" value="View My Contacts"><br>
+				</form>
+			</div>
+		</div>
+		
+
+    
+	   <div class="tab">
+	       <input type="radio" id="tab-2" name="tab-group-1">
+	       <label for="tab-2">Recommended</label>
+	       <div class="content">
+			
+			<div class="bio">
+				<a href="profile6.html" id="" title="profile6">
+				<img src="images/RyanCCrocker.jpg" alt="RyanCCrocker"></a>
+				<div class="description">
+					<a href="profile6.html" id="" title="profile6"><p>Ryan C. Crocker</p></a>
+					<p style="font-size:10pt; color:#838484">Special Envoy to Monitor and Combat Anti-Semitism</p>
+				</div>
+			</div>
+			
+			 <form action="#">
+			  <input type="submit" value="Load More"><br>
+			</form>
+		   </div> 
+	   </div>
+   </div>
+</div>
+
+<div class="col span_1_of_3" id="center"> 
+		<div id="collaborateSearch">
+			<input type="text" class='mySearch' id="dosquery" placeholder='Search by topic, person etc.' >
+                        <button id="search">Search</button>
+		</div>
+		<div id="results">
+			<p> </p>
+
+		</div>
+</div>
+<div class="col" id="trending" >
+	<h2>Trending</h2>
+	<hr>
+	<ol>
+		<a href="#"><li>China</li></a>
+		<a href="#"><li>Canada</li></a>
+		<a href="#"><li>Africa</li></a>
+		<a href="#"><li>Extremism</li></a>
+		<a href="#"><li>North Korea</li></a>
+		<a href="#"><li>United Nations</li></a>
+		<a href="#"><li>War</li></a>
+		<a href="#"><li>Saudi Arabia</li></a>
+		<a href="#"><li>Turkey</li></a>
+		<a href="#"><li>Election</li></a>
+	</ol>
+</div>
+</div>
+	
+	<div class="col span_1_of_3" id="trending"> 
+	</div>
+</div>
+
+
+<div class="footer">
+	<div class="section group" id="footer">
+	<div class="col span_3_of_3" id="footerContent">
+		<div id="about">
+		<h4>About</h4>
+		<hr>
+		<a href="#"><p>About UNIO</p></a>
+		<a href="#"><p>Creators</p></a>
+		<a href="#"><p>Mission Statement</p></a>
+	</div>
+	
+	<div id="support">
+		<h4>Support</h4>
+		<hr>
+		<a href="#"><p>FAQ</p></a>
+		<a href="#"><p>Contact Support</p></a>
+		<a href="#"><p>Report An Issue</p></a>
+	</div>
+	
+	<div id="licensing">
+		<h4>Licensing</h4>
+		<hr>
+		<a href="#"><p>Programming</p></a>
+		<a href="#"><p>Hosting</p></a>
+		<a href="#"><p>Development</p></a>
+	</div>
+</div>
+</div>
+</div>
+</html>

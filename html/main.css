@@ -1,0 +1,546 @@
+
+body{
+	background: url('images/DOS_BETTER.png') no-repeat scroll center;
+	min-height: 100%;
+    display: table;
+    width: 100%;
+}	
+
+header{
+	width:100%; 
+	background:#2B3642; 
+	height:75px;
+	padding: 5px 25px;
+}
+
+.footer{
+	color:#F0EEEE;
+	background:#2B3642;
+	width:100%;
+	display: table-row;
+	height: 1px;
+}
+#about{
+	float:left;
+}
+#support{
+	float:left;
+}
+#licensing{
+	float:left;
+}
+.footer expanded{
+	 height: 100%; 
+}
+#footerContent{
+	display:inline;
+}
+.footer p{
+	font-style: italic;
+	color:#F0EEEE;
+}
+#inner{
+	width: 50%;
+	margin: 0 auto;
+}
+#about{
+	padding:25px;
+}
+#support{
+	padding:25px;
+}
+#licensing{
+	padding:25px;
+}
+.footer hr{
+	margin-right: 80%;
+}
+
+h1{
+	font-family: 'Open Sans', sans-serif;
+	font-style: normal;
+	text-transform:uppercase;
+	font-size:26pt;
+	color:#13171E;
+}
+h2{
+	font-family: 'Open Sans', sans-serif;
+	font-style: normal;
+	text-transform:uppercase;
+	font-size:21pt;
+	color:#13171E;
+}
+h3{
+	font-family: 'Open Sans', sans-serif;
+	font-style: normal;
+	text-transform:uppercase;
+	font-size:18pt;
+	color:#13171E;
+}
+h4{
+	font-family: 'Open Sans', sans-serif;
+	font-style: normal;
+	text-transform:uppercase;
+	font-size:18pt;
+	color:#F0EEEE;
+}
+p{
+	font-family: 'Open Sans', sans-serif;
+	font-style: normal;
+	font-size:12pt;
+	color:#13171E;
+}
+input[type=submit]{
+	background:#2C636E;
+    width: 100%;
+    margin: 8px 0;
+    border: solid #2C636E;
+    cursor: pointer;
+	text-align:center;
+	padding-top:10px;
+	padding-bottom:10px;
+	color:#F0EEEE;
+	font-family: 'Open Sans', sans-serif;
+	font-style: normal;
+	font-size:12pt;
+	text-transform:uppercase;
+	border-radius: 3px;
+}
+input[type=submit]:hover {
+    background-color: #F0EEEE;
+	color:#2C636E;
+	border: solid #2C636E;
+}
+a:link {
+    color: #13171E;
+	text-decoration: none;
+	font-family: 'Open Sans', sans-serif;
+	font-style: normal;
+	font-size:12pt;
+}
+
+a:hover {
+    color: #838484;
+	text-decoration: none;
+}
+a:visited:hover {
+    color: #838484;
+	text-decoration: none;
+}
+a:visited{
+    color: #13171E;
+	text-decoration: none;
+	font-family: 'Open Sans', sans-serif;
+	font-style: normal;
+	font-size:12pt;
+}
+
+.container{
+	background-color: #EEEEEE;
+}
+
+/*SECTIONS*/
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+/*COLUMN SETUP*/
+.col{
+	display:block;
+	float:left;
+	margin:1% 0 1% 1.6%;
+}
+.col:first-child{ margin-left:0; }
+
+/*GROUPING*/
+.group:before,
+.group:after { content:""; display:table;
+}
+.group:after { clear:both;}
+.group { zoom:1;}
+
+/*GRID OF THREE*/
+.span_3_of_3 { width: 100%; }
+.span_2_of_3 { width:65%; min-width:500px;}
+.span_1_of_3 { 
+	width: 32.26%; 
+	min-width:340px;
+}
+
+/* GO FULL WIDTH BELOW 480 PIXELS*/
+@media only screen and (max-width: 480px) {
+	.col {  margin: 1% 0 1% 0%; }
+	.span_3_of_3, .span_2_of_3, .span_1_of_3 { width: 100%; }
+}
+
+
+/*SITE WIDE*/
+.results{
+	background:white;
+	width:100%;
+	overflow: hidden;
+	margin-top:25px;
+	padding:10px 10px 10px 10px;
+}
+.resultsRight{
+	float:left;
+	background:#EEEEEE;
+	width:70%;
+	margin-bottom: 10px;
+}
+.resultsLeft{
+	float:right;
+	background:#EEEEEE;
+	width:70%;
+	margin-bottom: 10px;
+}
+input[type=text]{
+    padding: 0;
+    margin: 0;
+    border: 1px solid #ccc;
+    width: 100%;
+	height:32px;
+    border-radius: 3px;
+    overflow: hidden;
+    background-color: #fff;
+	color:black;
+}
+#titleSpace{
+	text-align:center;
+	padding:10px;
+}
+#titleSpace hr { 
+    display: block;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    margin-left: 40%;
+    margin-right: 40%;
+    border: 1px solid #2B333D;
+}
+
+
+/*SEARCH RESULTS*/
+
+#results{
+	background: #EEEEEE;
+    
+}
+
+.person{
+    padding-top: 10px;
+    padding-left: auto;
+    padding-right: auto;
+}
+
+.person p{
+    margin: 0px;
+}
+
+.rimg{
+    float: left;
+    margin: 20px 20px 0px 20px;
+    border-radius: 50%;
+}
+
+.rname{
+    padding-left: 10px;
+    color: #13171E
+}
+
+.rtitle{
+    clear: both;
+    color: #838484;
+    padding-left: 90px;
+}
+
+.rphone{
+    color: #838484;
+}
+
+ 
+
+/*LOGIN PAGE*/
+#login{
+	align:center;
+	text-align:center;
+	padding-top:100px;
+	padding-bottom:25px;
+}
+#login input[type=text] {
+    width: 100%;
+    margin-bottom: 15px;
+	text-align:left;
+	color:#828282;
+	border-style: solid;
+	border-left: black;
+	border-right:black;
+	border-top:black;
+	font-size:16px;
+	height:35px;
+	background:#EEEEEE;
+	text-transform: uppercase;
+	font-family: 'Open Sans', sans-serif;
+	font-style: normal;
+	font-size:13.33px;
+}
+#login img{
+	width:100%;
+	padding:0px 0px 50px 0px;
+}
+#login a:hover {
+    color: #838484;
+	text-decoration: none;
+}
+
+
+
+/*HEADER*/
+#HeaderLeft{
+	float:left;
+}
+#HeaderRight{
+	float:right;
+}
+#HeaderRight img{
+	border-radius:50%;
+	width:50px;
+}
+#HeaderBar img{
+	margin:10px 0px;
+}
+
+
+/*Landing Pagew*/
+
+.tabs {
+  position: relative;   
+  min-height: 500px; /* This part sucks */
+  clear: both;
+}
+.tab {
+  float: left;
+}
+.tab label {
+  margin-left: -1px; 
+  position: relative;
+  left: 1px;
+  padding:5px;
+  font-weight: normal;
+}
+.tab [type=radio] {
+  display: none;   
+}
+.content {
+  position: absolute;
+  top: 28px;
+  left: 0;
+  background: #F0EEEE;
+  right: 0;
+  bottom: 22%;
+  
+}
+[type=radio]:checked ~ label {
+  background: #2B3642;
+  font-weight: bold;
+  color:#F0EEEE;
+  border-radius: 3px;
+  padding:3px 6px;
+}
+[type=radio]:checked ~ label ~ .content {
+  z-index: 1;
+}
+.tab label{
+	text-transform:uppercase;
+	font-size:12pt;
+}
+
+.bio img{
+	position:absolute;
+	border-radius: 50%;
+	width:50px;
+	left: 0;
+        margin-left: 15px;
+}
+.bio{
+	width:100%;
+	margin:20px;
+    clear: both;
+}
+.description{
+	float:right;
+	padding:0px 25px;
+	width:90%;
+}
+
+#trending{
+	padding:0px 0px 0px 50px;
+}
+#contacts{
+	padding:0px 0px 0px 50px;
+}
+#trending ol{
+	color: #838484;
+}
+#trending li{
+	padding:5px;
+	font-size:12pt;
+}
+
+/*#trending a:link {
+    color: #838484;
+	text-decoration: none;
+	font-family: 'Open Sans', sans-serif;
+	font-style: normal;
+	font-size:12pt;
+}
+#trending a:hover {
+    color: #2B3642;
+	text-decoration: none;
+}
+/
+
+/*PROFILE PAGE*/
+#profile{
+	background:white;
+	background:rgba(255,255,255,0.8);
+	border: solid #eeeeee 20px;
+    float: left;
+	padding: 20px;
+}
+.profileImage{
+	width:30%;
+	float:left;
+	padding:10px;
+    position: relative;
+	height: auto;
+}
+.profileImage img{
+	border-radius:50%;
+	width: 100%;
+	height: auto;
+}
+.topProfile{
+	display:inline;
+}
+.profileName{
+	text-align:left;
+	width:70%;
+	float:right;
+	padding:10px;
+}
+.profileName p{
+    color:#838484;
+}
+.editImage{
+	float:right;
+}
+.myTopics{
+	padding:30px 10px;
+    clear: both;
+}
+.myContacts{
+	padding:30px 10px;
+}
+.topic{
+	width:20%;
+	float:left;
+	display:block;
+    margin: 1%;
+    padding: 10px 0px 0px 5px;
+    background-color: #F0EEEE; 
+	text-align:center;
+	min-width:102px;
+	border-radius: 3px;
+}
+.myContactsTitle{
+	width:40%;
+	float:left;
+}
+.select-style{
+	width:25%;
+	text-align:right;
+	float:left;
+}
+.contactSearch{
+	width:65%;
+	float:left;
+	margin-right:5px;
+}
+.myTopics hr{
+    display: block;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    margin-left:0px;
+	margin-right:90%;
+    border: 1px solid #2B333D;
+}
+.myContacts hr{
+    display: block;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    margin-left: 0px;
+    margin-right: 75%;
+    border: 1px solid #2B333D;
+}
+
+.select-style {
+    border: 1px solid #2C636E;
+    width: 25%;
+    border-radius: 3px;
+    overflow: hidden;
+    background-color: #fff;
+    background: #2C636E url('images/whitearrow.png') no-repeat 90% 50%;
+	color:#F0EEEE;
+}
+
+.select-style select {
+    padding: 5px 8px;
+    width: 130%;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    background-image: none;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+}
+.select-style select:focus {
+    outline: none;
+}
+.contactSearch input[type=text]{
+    padding: 0;
+    margin: 0;
+    border: 1px solid #ccc;
+    width: 100%;
+	height:32px;
+    border-radius: 3px;
+    overflow: hidden;
+    background-color: #fff;
+	color:black;
+}
+.contactArea{
+	width:100%;
+	display:block;
+    clear: both;
+}
+#contact1{
+	display:block;
+	width:28%;
+    float: left;
+    margin: 1%;
+    padding: 10px 0px 0px 5px;
+    background-color: #F0EEEE; 
+	border-radius: 3px;
+}
+#contact1 img{
+	float:left;
+	padding:0px 5px;
+	border-radius:50%;
+	width:50px
+}
+
+#name{
+	padding:10px 5px;
+}
